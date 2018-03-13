@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ReviewAppFinal.Models.Review>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Rammetto+One" rel="stylesheet">
+<link href="~/Content/reviewStyle.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h1>Reviews</h1>
+<p>
+    <button type="button" class="btn btn-secondary">@Html.ActionLink("Create New +", "Create")</button>
+
+</p>
+
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail boxie">
+                <div class="caption">
+
+                    <p>
+                        @Html.DisplayNameFor(model => model.Category.Name) : @Html.DisplayFor(modelItem => item.Category.Name)
+
+                    </p>
+                    <p>
+                        @Html.DisplayNameFor(model => model.RelaseDate) :  @Html.DisplayFor(modelItem => item.RelaseDate)
+
+                    </p>
+                    <p>
+                        @Html.DisplayNameFor(model => model.Description) :  @Html.DisplayFor(modelItem => item.Description)
+
+                    </p>
+                    <p>
+                        @Html.DisplayNameFor(model => model.ReviewScore) :  @Html.DisplayFor(modelItem => item.ReviewScore)
+
+                    </p>
+                    <div class="n">
+                        <a href="@Url.Action("Edit", "Reviews", new { id = item.ReviewID })">
+                            <img id="editPic" src="~/Content/images/icons8-edit-48.png" />edit
+                        </a>
+
+                        <a href=" @Url.Action("Details", "Reviews", new { id = item.ReviewID })">
+                            <img id="detailsPics" src="~/Content/images/icons8-info-48.png" />
+                            <p>details</p>
+
+                        </a>
+
+                        <a href="@Url.Action("Delete", "Reviews", new { id = item.ReviewID })">
+                            <img id="Delete" src="~/Content/images/icons8-waste-48.png" />
+                            <p id="delete"> delete </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }
+</div>

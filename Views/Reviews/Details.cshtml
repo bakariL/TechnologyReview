@@ -1,0 +1,56 @@
+﻿<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans|Rammetto+One" rel="stylesheet">
+<link href="~/Content/reviewsDetails.css" rel="stylesheet" />
+@model ReviewAppFinal.Models.Review
+
+
+@{
+    ViewBag.Title = "Details";
+}
+    <a href=" @Url.Action("Index","Reviews" )"> <span class="glyphicon glyphicon-arrow-left btn-lg"></span>Go Back</a>
+
+
+
+<h2>Details Review</h2>
+<hr />
+<div class="row">
+
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail boxie">
+            <div class="caption">
+                <p>
+                    @Html.DisplayFor(modelItem => modelItem.Category.Name)
+
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => modelItem.RelaseDate)
+
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => Model.Description)
+                    modelItem
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => modelItem.ReviewScore)
+
+                </p>
+                <div class="n">
+                    <a href="@Url.Action("Edit", "Reviews", new { id = Model.ReviewID })">
+                        <img id="editPic" src="~/Content/images/icons8-edit-48.png" />edit
+                    </a>
+
+                    <a href="@Url.Action("Delete", "Reviews", new { id = Model.ReviewID })">
+                        <img id="Delete" src="~/Content/images/icons8-waste-48.png" />
+                        <p id="delete"> delete </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

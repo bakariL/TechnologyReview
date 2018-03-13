@@ -1,0 +1,16 @@
+﻿
+.boxie {
+    margin-top: 4em;
+    box-shadow: 1px 1px 0px 2px #313131;
+}
+
+h1 {
+    font-family: 'Indie Flower', cursive;
+}
+
+
+body {
+    background-image: linear-gradient(to right bottom, #f2f2f2, #c0e7ff, #0be8ff, #00e3c4, #00d246);
+    font-family: 'Indie Flower', cursive;
+}
+

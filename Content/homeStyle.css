@@ -1,0 +1,32 @@
+﻿body {
+    margin: 0;
+    background-image: linear-gradient(to right top, #00d246, #00ce96, #00c5d0, #00b6ee, #00a3eb);
+}
+.navbar-inverse.navbar-fixed-top {
+    background-color: #F4FBF3;
+    box-shadow: 3px 5px 6px #888888;
+    color: #3E4A3D;
+}
+
+
+.navbar-brand {
+    margin-right: 40em;
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:800;
+}
+
+.jumbotron {
+    background: none;
+    text-align:center;
+    margin-top: 15em;
+}
+
+.frontbtn {
+    background-color: #00D246;
+    border-radius: 8%;
+    border: none;
+    box-shadow: 1px 1px 1px 1px #868686;
+}
